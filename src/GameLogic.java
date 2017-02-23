@@ -10,16 +10,25 @@ public class GameLogic {
 	
 	Scoreboard scoreboard = new Scoreboard();
 	
+	
 	public void GamePlay(){
-		Shapes paper = new Shapes();
-		Shapes rock = new Shapes();
-		Shapes scissors = new Shapes();
-		Game game1 = new Game();
+		//Shapes paper = new Shapes();
+		//Shapes rock = new Shapes();
+		//Shapes scissors = new Shapes();
+		//Game game1 = new Game();
 		setupGame();
 		while(true){
 		selectShape();
 		startBattle();
-		game1.endGame();
+		int x = scoreboard.getP1Score();
+		int y = scoreboard.getP2Score();
+		System.out.println("Player 1 score = " + x);
+		System.out.println("Player 1 score = " + y);
+			if (scoreboard.getP1Score() == 3 || scoreboard.getP2Score() ==3){
+				System.out.println("Game ends! ");
+				break;
+			}
+		//game1.endGame();
 		}
 		
 	}
@@ -57,6 +66,7 @@ public class GameLogic {
 			
 			else {
 				//game should stop
+				System.out.println("Wrong number. Terminating...");
 			}
 		
 		
@@ -76,6 +86,7 @@ public class GameLogic {
 			
 			else {
 				//game should stop
+				System.out.println("Wrong number. Terminating...");
 			}
 		//shape2.setPlayerTwoShapeName(tempShape);
 		
@@ -90,13 +101,13 @@ public class GameLogic {
 			if(shape2.getPlayerTwoShapeName().equals("Scissors")){
 				System.out.println("p1 wins - score board");
 				//p1 wins - score board
-				scoreboard.setP1Score();
+				scoreboard.setP1Score(1);
 			}
 			
 			else if(shape2.getPlayerTwoShapeName().equals("Paper")){
 				//p2 wins - score board
 				System.out.println("p2 wins - score board");
-				scoreboard.setP2Score();
+				scoreboard.setP2Score(1);
 			}
 			
 			else{
@@ -113,13 +124,13 @@ public class GameLogic {
 			else if (shape2.getPlayerTwoShapeName().equals("Paper")){
 				//p1 wins
 				System.out.println("p1 wins - score board");
-				scoreboard.setP1Score();
+				scoreboard.setP1Score(1);
 			}
 			
 			else {
 				//p2 wins
 				System.out.println("p2 wins - score board");
-				scoreboard.setP2Score();
+				scoreboard.setP2Score(1);
 			}
 		}
 		
@@ -127,7 +138,7 @@ public class GameLogic {
 			if(shape2.getPlayerTwoShapeName().equals("Scissors")){
 				//p2 wins
 				System.out.println("p2 wins - score board");
-				scoreboard.setP2Score();
+				scoreboard.setP2Score(1);
 			}
 			
 			else if (shape2.getPlayerTwoShapeName().equals("Paper")){
@@ -138,7 +149,7 @@ public class GameLogic {
 			else{
 				//p1 wins
 				System.out.println("p1 wins - score board");
-				scoreboard.setP1Score();
+				scoreboard.setP1Score(1);
 			}
 		}
 		
