@@ -14,19 +14,21 @@ public class Game {
         System.out.println("      (____)                    _______)                 (____)");
         System.out.println("---.__(___)             ---.__________)            ---.__(___)");
         System.out.println();
-
+        System.out.println("We play as long as any player gets 3 points!");
 
 
 	}
 	
-	public void endGame(){
+	/*public void endGame(){
 		//shows all the statistics - summary 
-		Scoreboard scoreboard1 = new Scoreboard();
-		int x = scoreboard1.getP1Score();
-		System.out.println("Player 1 score = " + x);
-		int y = scoreboard1.getP2Score();
-		System.out.println("Player 1 score = " + y);
-	}
+		//Scoreboard scoreboard1 = new Scoreboard(); //bug - another object reffered to these variables which is answered V
+		//int x = scoreboard1.getP1Score();			// http://stackoverflow.com/questions/25404348/how-to-use-getters-and-setters-in-two-different-classes
+		//System.out.println("Player 1 score = " + x);
+		//int y = scoreboard1.getP2Score();
+		//System.out.println("Player 1 score = " + y);
+		
+		
+	}*/
 	
 	
 	public static void main(String[] args) {

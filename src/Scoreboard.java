@@ -5,12 +5,12 @@ public class Scoreboard {
 	private int playerTwoScore = 0;
 	
 	
-	public void setP1Score(){
-		playerOneScore++;
+	public void setP1Score(int point){
+		this.playerOneScore = playerOneScore + point;
 	}
 	
-	public void setP2Score(){
-		playerTwoScore++;
+	public void setP2Score(int point){
+		this.playerTwoScore = playerTwoScore + point;
 	}
 	
 	public int getP1Score(){
